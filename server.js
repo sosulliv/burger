@@ -6,9 +6,6 @@ import bodyParser from 'body-parser';
 import exphbs from 'express-handlebars';
 import router from './controllers/controller.js';
 
-
-
-
 /* eslint-disable no-console*/
 
 const port = 3007;
@@ -33,15 +30,6 @@ app.set('view engine', 'handlebars');
 //router
 app.use('/', router);
 
-
-app.get('/users', function (req, res) {
-	// Hard coding for simplicity. Pretend this hits a real database
-	res.json([
-		{ "id": 1, "firstName": "Bob", "lastName": "Smith", "email": "bob@gmail.com" },
-		{ "id": 2, "firstName": "Tammy", "lastName": "Norton", "email": "tnorton@yahoo.com" },
-		{ "id": 3, "firstName": "Tina", "lastName": "Lee", "email": "lee.tina@hotmail.com" }
-	]);
-});
 
 
 // Open Server

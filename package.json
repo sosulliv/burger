@@ -8,17 +8,19 @@
 		"open:src": "babel-node server.js",
 		"lint": "esw",
 		"lint:watch": "npm run lint -- --watch",
-		"security-check": "nsp check"
+		"security-check": "nsp check",
+		"test": "babel-node models/main.js"
 	},
 	"author": "Sean O'Sullivan",
 	"license": "MIT",
 	"dependencies": {
-		"whatwg-fetch": "1.0.0",
 		"body-parser": "^1.18.2",
+		"express": "4.16.0",
 		"express-handlebars": "^3.0.0",
 		"jquery": "^3.3.1",
-		"express": "4.16.0"
-	},
+		"mysql2": "^1.5.2",
+		"sequelize": "^4.32.7"
+		},
 	"devDependencies": {
 		"babel-cli": "6.16.0",
 		"babel-core": "6.17.0",
