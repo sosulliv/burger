@@ -1,18 +1,20 @@
 import burger_model from './ormsync.js'
 /*eslint-disable-line no-console*/
+//import { Promise } from 'es6-promise';
+//	import express from 'express';
+
+//let router = express.Router();
+
+
 burger_model.sync();
 
-function query_burger(devoured) {
 
-	burger_model.all({
-		limit: 100,
-		where: { devoured: devoured }
-	})
-		.then(burgers => {
 
-			console.log(burgers[1].dataValues);
-		})
-}
+
+
+//query_burger();
+
+
 
 function create_burger(burger_name) {
 	burger_model.create({
@@ -42,4 +44,4 @@ function update_burger(id) {
 
 
 
-export default { query_burger, create_burger, update_burger };
+export default {create_burger, update_burger };
